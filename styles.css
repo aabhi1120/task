@@ -1,0 +1,58 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  
+  .box {
+    flex: 1;
+    margin: 10px;
+    background: lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .box.expanded {
+    flex: 4;
+    background: #e0e0e0;
+    transition: all 0.3s ease;
+  }
+  
+  .box .content {
+    display: none;
+  }
+  
+  .box.expanded .content {
+    display: block;
+  }
+  
+  .box .options {
+    display: none;
+  }
+  
+  .box.expanded .options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .options button {
+    margin: 5px 0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
